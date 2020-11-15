@@ -65,6 +65,23 @@
     line-height: 1.8;
 }
 
+/*-----margin-----*/
+.m-margin-tb-tiny {
+    margin-top: 0.3em !important;
+    margin-bottom: 0.3em !important;
+}
+.m-margin-top-small{
+    margin-top: 0.5em !important;
+}
+
+.m-margin-top{
+    margin-top: 1em !important;
+}
+
+.m-margin-top-large{
+    margin-top: 2em !important;
+}
+
 /*透明度*/
 .m-opacity-mini {
     opacity: 0.8 !important;
@@ -75,9 +92,18 @@
     display: inline-block !important;
 }
 
+/*-----container-----*/
 .m-container {
     max-width: 72em !important;
     margin: auto !important;
 }
+
+/*-----color-----*/
+.m-black
+{
+    color:#333 !important;
+}
+
+
 
 
