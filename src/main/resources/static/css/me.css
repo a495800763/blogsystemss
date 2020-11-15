@@ -50,6 +50,11 @@ body {
     padding-bottom: 5em !important;
 }
 
+.m-padded-lr {
+    padding-left: 4em !important;
+    padding-right: 4em !important;
+}
+
 /*-----text-----*/
 .m-text {
     font-weight: 300 !important;
@@ -87,6 +92,7 @@ body {
     margin-top: 2em !important;
 }
 
+
 /*-----透明度-----*/
 .m-opacity-mini {
     opacity: 0.8 !important;
@@ -112,6 +118,11 @@ body {
 /*-----container-----*/
 .m-container {
     max-width: 72em !important;
+    margin: auto !important;
+}
+
+.m-container-small {
+    max-width: 60em !important;
     margin: auto !important;
 }
 
