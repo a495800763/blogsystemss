@@ -70,24 +70,32 @@
     margin-top: 0.3em !important;
     margin-bottom: 0.3em !important;
 }
-.m-margin-top-small{
+
+.m-margin-top-small {
     margin-top: 0.5em !important;
 }
 
-.m-margin-top{
+.m-margin-top {
     margin-top: 1em !important;
 }
 
-.m-margin-top-large{
+.m-margin-top-large {
     margin-top: 2em !important;
 }
 
-/*透明度*/
+/*-----透明度-----*/
 .m-opacity-mini {
     opacity: 0.8 !important;
 }
 
-/*display*/
+/*-----position-----*/
+.m-right-top {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/*-----display-----*/
 .m-inline-block {
     display: inline-block !important;
 }
@@ -99,9 +107,22 @@
 }
 
 /*-----color-----*/
-.m-black
-{
-    color:#333 !important;
+.m-black {
+    color: #333 !important;
+}
+
+.m-mobile-show{
+    display: none !important;
+}
+
+@media screen and (max-width: 768px) {
+    .m-mobile-hide {
+    display: none !important;
+    }
+    .m-mobile-show
+    {
+        display: block !important;
+    }
 }
 
 
