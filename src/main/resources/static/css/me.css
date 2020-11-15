@@ -1,3 +1,7 @@
+body {
+    background-image: url("../image/bg.png");
+}
+
 .m-padded-mini {
     padding: 0.2em !important;
 }
@@ -88,6 +92,11 @@
     opacity: 0.8 !important;
 }
 
+.m-opacity-tiny {
+    opacity: 0.6 !important;
+}
+
+
 /*-----position-----*/
 .m-right-top {
     position: absolute;
@@ -111,16 +120,16 @@
     color: #333 !important;
 }
 
-.m-mobile-show{
+.m-mobile-show {
     display: none !important;
 }
 
 @media screen and (max-width: 768px) {
     .m-mobile-hide {
-    display: none !important;
+        display: none !important;
     }
-    .m-mobile-show
-    {
+
+    .m-mobile-show {
         display: block !important;
     }
 }
