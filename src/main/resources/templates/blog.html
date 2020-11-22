@@ -58,7 +58,7 @@
             </div>
             <h2 class="ui header center aligned">关于刻意练习的清单</h2>
             <br>
-            <div id="content" class="m-padded-lr m-padded-tb-large">
+            <div id="content" class="m-padded-lr-responsive m-padded-tb-large">
                 <p>啊是的请问的阿斯顿阿斯顿阿斯顿</p>
                 <h2>1</h2>
                 <p>VS工会本然后为请问啊实打实的1权威的</p>
@@ -67,32 +67,149 @@
             </div>
 
             <!--标签-->
-            <div class="m-padded-lr">
+            <div class="m-padded-lr-responsive">
                 <div class="ui basic teal left pointing label">方法论</div>
             </div>
             <!--赞赏-->
             <div class="ui center aligned basic segment">
-                <button class="ui orange basic circular button">赞赏</button>
+                <button id="payButton" class="ui orange basic circular button">赞赏</button>
             </div>
-            <div class="ui orange basic label">
-               <div class="ui images" style="font-size: inherit !important;">
-                   <div class="image">
-                       <img src="../static/image/QRCode.png" alt="" class="ui rounded bordered image" style="width: 120px">
-                       <div>支付宝</div>
-                   </div>
-                   <div class="image">
-                       <img src="../static/image/QRCode.png" alt="" class="ui rounded bordered image" style="width: 120px">
-                       <div>微 信</div>
-                   </div>
-               </div>
+            <div class="ui payQR flowing popup transition hidden">
+                <div class="ui orange basic label">
+                    <div class="ui images" style="font-size: inherit !important;">
+                        <div class="image">
+                            <img src="../static/image/QRCode.png" alt="" class="ui rounded bordered image"
+                                 style="width: 120px">
+                            <div>支付宝</div>
+                        </div>
+                        <div class="image">
+                            <img src="../static/image/QRCode.png" alt="" class="ui rounded bordered image"
+                                 style="width: 120px">
+                            <div>微 信</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
         </div>
         <div class="ui attached positive message">
-            博客信息
+            <!--博客信息-->
+            <div class="ui middle aligned grid">
+                <div class="eleven wide column">
+                    <ui class="list">
+                        <li>作者</li>
+                        <li>链接</li>
+                        <li>版权声明</li>
+                        <li>相关</li>
+                    </ui>
+                </div>
+                <div class="five wide column">
+                    <img src="../static/image/QRCode.png" alt="" class="ui right floated rounded bordered image"
+                         style="width: 110px">
+                </div>
+            </div>
         </div>
         <div class="ui bottom attached segment">
-            留言区域
+            <!--留言区域列表-->
+            <div class="ui teal segment">
+                <div class="ui threaded comments">
+                    <h3 class="ui dividing header">Comments</h3>
+                    <div class="comment">
+                        <a class="avatar">
+                            <img src="../static/image/avatar/timg.jpg" alt="">
+                        </a>
+                        <div class="content">
+                            <a href="" class="author">Matt</a>
+                            <div class="metadata">
+                                <span class="date">Today at 5:42PM</span>
+                            </div>
+                            <div class="text">
+                                How artistic!
+                            </div>
+                            <div class="actions">
+                                <a href="" class="reply">回复</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <a class="avatar">
+                            <img src="../static/image/avatar/timg.jpg" alt="">
+                        </a>
+                        <div class="content">
+                            <a href="" class="author">Elliot Fu</a>
+                            <div class="metadata">
+                                <span class="date">Yesterday at 12:30PM</span>
+                            </div>
+                            <div class="text">
+                                <p>This has been very useful for my research. Thanks as well!</p>
+                            </div>
+                            <div class="actions">
+                                <a href="" class="reply">回复</a>
+                            </div>
+                        </div>
+                        <div class="comments">
+                            <div class="comment">
+                                <a class="avatar">
+                                    <img src="../static/image/avatar/timg.jpg" alt="">
+                                </a>
+                                <div class="content">
+                                    <a href="" class="author">Jenny Hess</a>
+                                    <div class="metadata">
+                                        <span class="date">Just now</span>
+                                    </div>
+                                    <div class="text">
+                                        Elliot you are always so right :)
+                                    </div>
+                                    <div class="actions">
+                                        <a href="" class="reply">回复</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <a class="avatar">
+                            <img src="../static/image/avatar/timg.jpg" alt="">
+                        </a>
+                        <div class="content">
+                            <a href="" class="author">Joe Henderson</a>
+                            <div class="metadata">
+                                <span class="date">5 days ago</span>
+                            </div>
+                            <div class="text">
+                                <p>Dude, this is awesome.Thanks so much</p>
+                            </div>
+                            <div class="actions">
+                                <a href="" class="reply">回复</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ui form">
+                <div class="field">
+                    <textarea name="content" placeholder="请输入评论信息..."></textarea>
+                </div>
+                <div class="fields">
+                    <div class="field m-mobile-wide m-margin-bottom-small">
+                        <div class="ui left icon input">
+                            <i class="user icon"></i>
+                            <input type="text" name="nickname" placeholder="姓名">
+                        </div>
+                    </div>
+                    <div class="field m-mobile-wide m-margin-bottom-small">
+                        <div class="ui left icon input">
+                            <i class="mail  icon"></i>
+                            <input type="text" name="email" placeholder="邮箱">
+                        </div>
+                    </div>
+                    <div class="field m-mobile-wide m-margin-bottom-small">
+                        <button class="ui teal button m-mobile-wide">
+                            <i class="edit icon"></i>
+                            发布
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
@@ -140,6 +257,13 @@
     $('.menu.toggle').click(function () {
         $('.m-item').toggleClass('m-mobile-hide');
     });
+
+    //设置博客详情页面赞赏二维码的弹出
+    $('#payButton').popup({
+        popup: $('.payQR.popup'),
+        on: 'click',
+        position: 'bottom center',
+    })
 </script>
 </body>
 </html>
