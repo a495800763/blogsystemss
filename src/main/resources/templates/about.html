@@ -33,17 +33,51 @@
 <!--中间内容-->
 <div class="m-container-small m-padded-tb-big">
     <div class="ui container">
-        <div class="ui grid">
+        <div class="ui stackable grid">
             <div class="eleven wide column">
+                <div class="ui segment">
+                    <img src="https://unsplash.it/800/600?image=1005" alt="" class="ui rounded image">
+                </div>
 
             </div>
             <div class="five wide column">
-
+                <div class="ui top attached segment">
+                    <div class="ui header">关于我</div>
+                </div>
+                <div class="ui attached segment">
+                    <p class="m-text-thin">柳梦琪 一个小肥柴罢了.</p>
+                    <p class="m-text-thin">希望不负自我的期待.</p>
+                </div>
+                <div class="ui attached segment">
+                    <div class="ui basic orange label m-margin-tb-tiny">编程</div>
+                    <div class="ui basic orange label m-margin-tb-tiny">电影</div>
+                    <div class="ui basic orange label m-margin-tb-tiny">NBA</div>
+                    <div class="ui basic orange label m-margin-tb-tiny">汽车</div>
+                    <div class="ui basic orange label m-margin-tb-tiny">旅行</div>
+                </div>
+                <div class="ui attached segment">
+                    <div class="ui basic teal label m-margin-tb-tiny">Java</div>
+                    <div class="ui basic teal label m-margin-tb-tiny">MySQL</div>
+                    <div class="ui basic teal label m-margin-tb-tiny">数据结构</div>
+                    <div class="ui basic teal label m-margin-tb-tiny">Linux</div>
+                    <div class="ui basic teal label m-margin-tb-tiny">IDEA</div>
+                    <div class="ui basic teal label m-margin-tb-tiny">Eclipse</div>
+                    <div class="ui basic teal label m-margin-tb-tiny">Node.js</div>
+                    <div class="ui basic teal label m-margin-tb-tiny">React</div>
+                </div>
+                <div class="ui bottom attached segment">
+                    <a href="#" class="ui circular button icon"><i class="github icon"></i></a>
+                    <a href="#" class="ui wechat circular button icon"><i class="weixin icon"></i></a>
+                    <a href="#" class="ui qq circular button icon " data-content="49800763"
+                       data-position="bottom center"><i class="qq icon"></i></a>
+                </div>
+                <div class="ui wechatQR flowing popup transition hidden" style="width: 120px">
+                    <img src="../static/image/QRCode.png" alt="" class="ui rounded image" style="width: 110px">
+                </div>
             </div>
         </div>
     </div>
 </div>
-
 <br>
 <br>
 <!--底部footer-->
@@ -89,6 +123,15 @@
     $('.menu.toggle').click(function () {
         $('.m-item').toggleClass('m-mobile-hide');
     });
+
+    //设置qq号码的弹出
+    $('.qq').popup();
+
+    //设置博客详情页面赞赏二维码的弹出
+    $('.wechat').popup({
+        popup: $('.wechatQR.popup'),
+        position: 'bottom center',
+    })
 </script>
 </body>
 </html>
