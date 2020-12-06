@@ -34,9 +34,125 @@
         <i class="sidebar icon"></i>
     </a>
 </nav>
+
+<!--二级导航-->
+<div class="ui attached pointing  menu">
+    <div class="ui container">
+        <div class="ui right menu">
+            <a href="" class="item">发布</a>
+            <a href="" class=" teal active item">列表</a>
+        </div>
+
+    </div>
+</div>
+
 <!--中间内容-->
 <div class="m-container-small m-padded-tb-big">
     <div class="ui container">
+        <form action="#" method="post" class="ui segment form">
+            <div class=" inline fields">
+                <div class="field">
+                    <input type="text" name="title" placeholder="标题">
+                </div>
+                <div class="field">
+                    <div class="ui selection dropdown">
+                        <input type="hidden" name="type">
+                        <i class="dropdown icon"></i>
+                        <div class="default text">分类</div>
+                        <div class="menu">
+                            <div class="item" data-value="1">错误日志</div>
+                            <div class="item" data-value="2">开发者随笔</div>
+                            <div class="item" data-value="3">转载</div>
+                            <div class="item" data-value="4">日常生活</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="recommend" name="recommend">
+                        <lable for="recommend">推荐</lable>
+                    </div>
+                </div>
+                <div class="field">
+                    <button class="ui mini teal basic button"><i class="search icon"></i> 搜索</button>
+                </div>
+            </div>
+        </form>
+
+        <!--表格-->
+        <table class="ui table">
+            <thead>
+            <tr>
+                <th></th>
+                <th>标题</th>
+                <th>类型</th>
+                <th>推荐</th>
+                <th>更新时间</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>可以联系青岛</td>
+                <td>认知升级</td>
+                <td>是</td>
+                <td>2020-12-06</td>
+                <td>
+                    <a href="#" class="ui mini teal basic button">编辑</a>
+                    <a href="#" class="ui mini red basic button">删除</a>
+                </td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>可以联系青岛</td>
+                <td>认知升级</td>
+                <td>是</td>
+                <td>2020-12-06</td>
+                <td>
+                    <a href="#" class="ui mini teal basic button">编辑</a>
+                    <a href="#" class="ui mini red basic button">删除</a>
+                </td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>可以联系青岛</td>
+                <td>认知升级</td>
+                <td>是</td>
+                <td>2020-12-06</td>
+                <td>
+                    <a href="#" class="ui mini teal basic button">编辑</a>
+                    <a href="#" class="ui mini red basic button">删除</a>
+                </td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <th colspan="6">
+<!--                    <div class="ui right floated pagination menu">-->
+<!--                        <a class="icon item">-->
+<!--                            <i class="left chevron icon"></i>-->
+<!--                        </a>-->
+<!--                        <a href="#" class="item">1</a>-->
+<!--                        <a href="#" class="item">2</a>-->
+<!--                        <a href="#" class="item">3</a>-->
+<!--                        <a href="#" class="item">4</a>-->
+<!--                        <a href="#" class="item">5</a>-->
+<!--                        <a class="icon item">-->
+<!--                            <i class="right chevron icon"></i>-->
+<!--                        </a>-->
+<!--                    </div>-->
+
+                    <div class="ui mini pagination menu">
+                        <a href="" class="item">上一页</a>
+                        <a href="" class="item">下一页</a>
+                    </div>
+                    <a href="" class="ui teal  right floated mini basic button">新增</a>
+                </th>
+            </tr>
+            </tfoot>
+        </table>
 
     </div>
 </div>
@@ -88,8 +204,9 @@
     });
 
     $('.ui.dropdown').dropdown({
-        on:'hover'
+        on: 'hover'
     });
+    $('.ui.checkbox').checkbox();
 </script>
 </body>
 </html>
