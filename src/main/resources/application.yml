@@ -3,5 +3,8 @@ spring:
     mode: HTML
   profiles:
     active: dev
+  jpa:
+    open-in-view: false
 server:
   port: 23455
+
