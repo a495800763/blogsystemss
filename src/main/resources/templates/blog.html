@@ -502,9 +502,20 @@ h5,h6{font-size:1em;}
     <div class="ui vertical icon buttons ">
         <button type="button" class="ui teal button">目录</button>
         <a href="#comment-container" class="ui teal button">留言</a>
-        <button class="ui icon  button"><i class="weixin icon"></i></button>
-        <a href="#" class="ui teal button"><i class="chevron up icon"></i></a>
+        <button class="ui wechat icon  button"><i class="weixin icon"></i></button>
+        <div id="toTop-button" href="#" class="ui teal button"><i class="chevron up icon"></i></div>
     </div>
+</div>
+
+
+<div class="ui toc-container flowing popup transition hidden" style="width: 250px!important;">
+    <ol class="js-toc">
+    </ol>
+</div>
+
+
+<div id="qrcode" class="ui wechatQR flowing popup transition hidden" style="width: 130px!important;">
+    <!--    <img src="../static/image/QRCode.png" alt="" class="ui rounded image" style="width: 120px">-->
 </div>
 
 
@@ -548,12 +559,28 @@ h5,h6{font-size:1em;}
 </footer>
 <script src="../static/js/jquery/3.1.1/jquery.min.js"></script>
 <script src="../static/js/jquery/3.1.1/jquery.js"></script>
+<script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
 <script src="https://cdn.bootcdn.net/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
-
+<script src="../static/lib/qrcode/qrcode.min.js"></script>
 <script>
     $('.menu.toggle').click(function () {
         $('.m-item').toggleClass('m-mobile-hide');
     });
+
+    // tocbot.init(
+    //     {
+    //         tocSelector: '.js-toc',
+    //         contentSelector: '.js-toc-content',
+    //         headingSelector: 'h1,h2,h3',
+    //     }
+    // );
+
+    $('.toc.button').popup({
+        popup: $('.toc-container.popup'),
+        on: 'click',
+        position: 'left center'
+    })
+
 
     //设置博客详情页面赞赏二维码的弹出
     $('#payButton').popup({
@@ -561,6 +588,27 @@ h5,h6{font-size:1em;}
         on: 'click',
         position: 'bottom center',
     })
+
+
+    //设置博客详情页面赞赏二维码的弹出
+    $('.wechat').popup({
+        popup: $('.wechatQR.popup'),
+        position: 'left center',
+    })
+
+
+    var qrcode = new QRCode("qrcode", {
+        text: "http://jindo.dev.naver.com/collie",
+        width: 110,
+        height: 110,
+        colorDark: "#000000",
+        colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.H
+    });
+
+    $('#toTop-button').click(function () {
+        $(window).scrollTo(0,500);
+    });
 </script>
 </body>
 </html>
