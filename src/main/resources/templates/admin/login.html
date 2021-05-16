@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-<head th:replace="admin/fragment::head(~{:: title})">
+<head th:replace="admin/_fragment::head(~{:: title})">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>分类</title>
@@ -19,7 +19,7 @@
                         管理后台登录
                     </div>
                 </h2>
-                <form class="ui large form" method="post" action="#">
+                <form class="ui large form" method="post" action="#" th:action="@{/admin/login}">
                     <div class="ui segment">
                         <div class="field">
                             <div class="ui left icon input">

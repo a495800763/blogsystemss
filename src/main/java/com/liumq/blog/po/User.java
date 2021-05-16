@@ -13,7 +13,7 @@ public class User {
     private Long id;
     private String nickName;
     private String userName;
-    private String passWord;
+    private String password;
     private String email;
     private String avatar;
     private Integer type;
@@ -62,11 +62,11 @@ public class User {
     }
 
     public String getPassWord() {
-        return passWord;
+        return password;
     }
 
     public void setPassWord(String passWord) {
-        this.passWord = passWord;
+        this.password = passWord;
     }
 
     public String getEmail() {
@@ -116,7 +116,7 @@ public class User {
                 "id=" + id +
                 ", nickName='" + nickName + '\'' +
                 ", userName='" + userName + '\'' +
-                ", passWord='" + passWord + '\'' +
+                ", passWord='" + password + '\'' +
                 ", email='" + email + '\'' +
                 ", avatar='" + avatar + '\'' +
                 ", type=" + type +
